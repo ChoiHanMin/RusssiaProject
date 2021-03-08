@@ -1,0 +1,84 @@
+user
+  - id (int) PK
+  - name (varchar) 이름
+  - idPhoto (varchar) 증명사진 url
+  - gender (boolean) 성별
+  - brithday (datetime) 생일
+  - nationality (enum) 국적
+  - phone (text) 폰 번호 (암호화)
+  - accountNumber (text) 계좌번호 (암호화)
+  - email (text) 이메일 (암호화)
+  - pw (text) 비밀번호 (암호화)
+  - grade (enum) 회원 등급
+  - certification (text) 인증번호 (암호화)
+  - emailCheck (boolean) 이메일 인증 여부
+  - phoneCheck (boolean) 번호 인증 여부
+  - status (enum) 회원 상태 (이용중, 휴면, 탈퇴)
+  - createdAt (datetime) 생성 날짜
+  - updatedAt (datetime) 변경 날짜
+  - lastedLogin (datetime) 최종 로그인 날짜
+
+category
+  - id (int) PK
+  - name (varchar) 카테고리 리스트 (택시, 관광, 식당, 예매확인)
+
+taxiCategory
+  - id (int) PK
+  - categoryId (int) 메인 카테고리 id
+  - name (varchar) 카테고리 리스트 (공항/픽업장소, 픽업장소/공항, 날짜 및 시간)
+
+driver
+  - id (int) PK
+  - name (varchar) 운전사 이름
+  - gender (boolean) 성별
+  - brithday (datetime) 생일
+  - nationality (enum) 국적
+  - phone (text) 폰 번호 (암호화)
+  - accountNumber (text) 계좌번호 (암호화)
+  - email (varchar) 이메일 (암호화)
+  - certification (text) 인증번호 (암호화)
+  - emailCheck (boolean) 이메일 인증 여부
+  - phoneCheck (boolean) 번호 인증 여부
+  - ilicensePhoto (varchar) 면허 사진 url
+  - licenseCode (text) 면허 번호 (암호화)
+  - licenseDate (datetime) 면허 취득일
+  - number (varchar) 차량 번호
+  - type (enum) 차종
+  - gps (text) 현위치
+  - status (enum) 상태 (대기, 샌딩, 픽업, 휴무, 휴식)
+  - createdAt (datetime) 생성 날짜
+  - updatedAt (datetime) 변경 날짜
+
+taxiHistory
+  - id (int) PK
+  - userId (int) 이용자 아이디
+  - driverId (int) 운전사 아이디
+  - type (enum) 운행 타입 (샌딩, 픽업)
+  - status (eunm) 진행 상태(진행중, 완료, 취소)
+  - reservationDate (datetime) 날짜, 시간
+  - createdAt (datetime) 생성 날짜
+  - updatedAt (datetime) 변경 날짜
+
+tripCategory
+  - id (int) PK
+  - categoryId (int) 메인 카테고리 id
+  - name (varchar) 카테고리 리스트 (관광 코스 명, 날짜, 인원)
+
+tripCorse
+  - id (int) PK
+  - name (varchar) 코스 명
+  - 
+
+restaurantCategory
+  - id (int) PK
+  - restaurantId (int) 레스토랑 id
+  - name (varchar) 레스토랑 이름
+  - address (varchar) 레스토랑 위치
+  - kind (varchar) 음식 종류
+  - mainMenu (varchar) 대표메뉴
+  - menuImgUrl (text) 대표메뉴 이미지 url
+  - star (int) 평점
+  - openTime (datetime) 오픈 시간
+  - closeTime (datetime) 마감 시간
+  - webUrl (varchar) 공식 페이지 url
+  - content (text) 가게 입장에서 적을 내용 (필수 아님)
