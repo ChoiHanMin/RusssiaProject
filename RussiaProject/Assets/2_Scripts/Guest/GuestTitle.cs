@@ -1,37 +1,38 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class GuestTitle : MonoBehaviour
-{ 
-    public RectTransform rectLoading;
-    public GameObject test;
+public class GuestTitle : Title
+{
 
-    private float timeLading;
-    private const float UPDATE_CYCLE = 0.2f;
     private void Start()
     {
-        rectLoading = GameObject.Find("Img_Loading").GetComponent<RectTransform>();
-
-        timeLading = UPDATE_CYCLE;
-
+        base.Start();
+		PopupUI.Inst.test = false;
     }
+
 
     private void Update()
-    {
-        UpdateLoading();
-        //rectLoading.Rotate(0,0, - (100f * Time.deltaTime));
-    }
+	{
+        base.Update();
+	}
 
+    public void LoadMainScene()
+	{
+        SceneManager.LoadScene("GuestMain");
+	}
 
+	protected override void ClickBtnSingIn()
+	{
+		if(DebugingApp.Inst.nowTestMode)
+		{
+			LoadMainScene();
+		}
+	}
 
-    public void UpdateLoading()
-    {
-        timeLading -= Time.deltaTime;
-        if (timeLading < 0)
-        {
-            rectLoading.Rotate(0, 0, -10f);
-            timeLading = UPDATE_CYCLE;
-        }
-    }
+	protected override void ClickBtnCreate()
+	{
+		base.ClickBtnCreate();
+	}
 }
