@@ -9,7 +9,6 @@ public class GuestTitle : Title
     private void Start()
     {
         base.Start();
-		PopupUI.Inst.test = false;
     }
 
 
@@ -27,7 +26,8 @@ public class GuestTitle : Title
 	{
 		if(DebugingApp.Inst.nowTestMode)
 		{
-			LoadMainScene();
+			PopupUI.Inst.ActivePopupMessage("test", "test");
+			Debug.Log("push");
 		}
 	}
 
