@@ -15,7 +15,6 @@ public class PopupUI : Singletone<PopupUI>
 
     public UIPopup uIPopup;
     public Button btnOk;
-    public UIButton tbtnOk;
 
 	private void Awake()
 	{
@@ -28,13 +27,15 @@ public class PopupUI : Singletone<PopupUI>
 		txtTitle = GameObject.Find("Popup_Title").GetComponent<Text>();
 		txtMessage = GameObject.Find("Popup_Message").GetComponent<Text>();
 		uIPopup = gameObject.GetComponent<UIPopup>();
-		tbtnOk = gameObject.GetComponentInChildren<UIButton>();
+		btnOk = gameObject.GetComponentInChildren<Button>();
 	}
 
 	private void Start()
     {
         strMessage = new StringBuilder();
         strTitle = new StringBuilder();
+
+		btnOk.onClick.AddListener(() => SelecOk());
 	}
 
 	private void Update()
@@ -43,16 +44,17 @@ public class PopupUI : Singletone<PopupUI>
 	}
 	public void ActivePopupMessage(string _strtTitle  ,string _strMessage)
     {
-        //txtMessage.text = _strMessage;
-        //txtTitle.text = _strtTitle;
+		txtMessage.text = _strMessage;
+		txtTitle.text = _strtTitle;
 
-        //this.gameObject.SetActive(true);
-        uIPopup.Show();
+		//this.gameObject.SetActive(true);
+		uIPopup.Show();
     }
 
     public void SelecOk()
 	{
         //this.gameObject.SetActive(false);
         uIPopup.Hide();
+		Debug.Log(nameof(SelecOk));
 	}
 }

@@ -818,8 +818,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 41.000015, y: -49.3}
-  m_SizeDelta: {x: -97.99997, y: 90.5}
+  m_AnchoredPosition: {x: 52.079994, y: -49.3}
+  m_SizeDelta: {x: -130.36002, y: 90.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &639362026
 MonoBehaviour:
@@ -847,7 +847,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 191
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -2351,10 +2351,10 @@ MonoBehaviour:
     PresetCategory: Uncategorized
     PresetName: Default
   HideOnAnyButton: 0
-  HideOnBackButton: 0
-  HideOnClickAnywhere: 1
+  HideOnBackButton: 1
+  HideOnClickAnywhere: 0
   HideOnClickContainer: 0
-  HideOnClickOverlay: 0
+  HideOnClickOverlay: 1
   HideProgressor: {fileID: 0}
   OnInverseVisibilityChanged:
     m_PersistentCalls:
@@ -2447,7 +2447,7 @@ MonoBehaviour:
         Duration: 0.2
       Fade:
         AnimationType: 1
-        Enabled: 0
+        Enabled: 1
         From: 0
         To: 0
         By: 0.5
@@ -2463,7 +2463,7 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 1
+        Duration: 0.2
     LoadSelectedPresetAtRuntime: 0
     InstantAnimation: 0
     OnFinished:
@@ -2565,8 +2565,7 @@ MonoBehaviour:
   txtTitle: {fileID: 639362026}
   txtMessage: {fileID: 1347905060}
   uIPopup: {fileID: 1820804271}
-  btnOk: {fileID: 0}
-  tbtnOk: {fileID: 0}
+  btnOk: {fileID: 2136693441}
 --- !u!1 &1895060567
 GameObject:
   m_ObjectHideFlags: 0
