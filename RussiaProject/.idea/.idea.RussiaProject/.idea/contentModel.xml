@@ -17,13 +17,16 @@
         </e>
         <e p="2_Scripts" t="Include">
           <e p="DataManager.cs" t="Include" />
+          <e p="DebugingApp.cs" t="Include" />
           <e p="Guest" t="Include">
             <e p="GuestTitle.cs" t="Include" />
           </e>
           <e p="Login.cs" t="Include" />
           <e p="NULLScript.cs" t="Include" />
           <e p="PacketManager.cs" t="Include" />
+          <e p="PopupUI.cs" t="Include" />
           <e p="Singletone.cs" t="Include" />
+          <e p="Title.cs" t="Include" />
         </e>
         <e p="Doozy" t="Include">
           <e p="Editor" t="Include">
